@@ -1,0 +1,46 @@
+<?php
+
+namespace ModulosBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Alumnoresponsable
+ *
+ * @ORM\Table(name="AlumnoResponsable", indexes={@ORM\Index(name="idAlumno", columns={"idAlumno"}), @ORM\Index(name="idResponsable", columns={"idResponsable"})})
+ * @ORM\Entity
+ */
+class Alumnoresponsable
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="alumno_responsable", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $alumnoResponsable;
+
+    /**
+     * @var \Alumnos
+     *
+     * @ORM\ManyToOne(targetEntity="Alumnos")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idAlumno", referencedColumnName="id")
+     * })
+     */
+    private $idalumno;
+
+    /**
+     * @var \Responsables
+     *
+     * @ORM\ManyToOne(targetEntity="Responsables")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idResponsable", referencedColumnName="id")
+     * })
+     */
+    private $idresponsable;
+
+
+}
+?>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Alumnoresponsable" table="AlumnoResponsable">
+    <indexes>
+      <index name="idAlumno" columns="idAlumno"/>
+      <index name="idResponsable" columns="idResponsable"/>
+    </indexes>
+    <id name="alumnoResponsable" type="integer" column="alumno_responsable">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <many-to-one field="idresponsable" target-entity="Responsables">
+      <join-columns>
+        <join-column name="idResponsable" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idalumno" target-entity="Alumnos">
+      <join-columns>
+        <join-column name="idAlumno" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

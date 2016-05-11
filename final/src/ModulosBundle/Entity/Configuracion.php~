@@ -1,0 +1,68 @@
+<?php
+
+namespace ModulosBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Configuracion
+ *
+ * @ORM\Table(name="Configuracion")
+ * @ORM\Entity
+ */
+class Configuracion
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="clave", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $clave;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="text", length=65535, nullable=false)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titulo", type="text", length=65535, nullable=false)
+     */
+    private $titulo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mailContacto", type="text", length=65535, nullable=false)
+     */
+    private $mailcontacto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cantElem", type="integer", nullable=false)
+     */
+    private $cantelem;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="habilitada", type="boolean", nullable=false)
+     */
+    private $habilitada;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="textoDeshab", type="text", length=65535, nullable=false)
+     */
+    private $textodeshab;
+
+
+}
+?>

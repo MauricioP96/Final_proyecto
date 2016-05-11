@@ -1,0 +1,39 @@
+<?php
+
+namespace ModulosBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Usuarioresponsable
+ *
+ * @ORM\Table(name="UsuarioResponsable", indexes={@ORM\Index(name="idresponsable", columns={"idresponsable"})})
+ * @ORM\Entity
+ */
+class Usuarioresponsable
+{
+    /**
+     * @var \Usuarios
+     *
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\OneToOne(targetEntity="Usuarios")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idusuario", referencedColumnName="id")
+     * })
+     */
+    private $idusuario;
+
+    /**
+     * @var \Responsables
+     *
+     * @ORM\ManyToOne(targetEntity="Responsables")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idresponsable", referencedColumnName="id")
+     * })
+     */
+    private $idresponsable;
+
+
+}
+?>

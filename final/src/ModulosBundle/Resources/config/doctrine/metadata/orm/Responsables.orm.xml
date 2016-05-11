@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Responsables" table="Responsables">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="tipo" type="text" column="tipo" length="65535" nullable="false"/>
+    <field name="nombre" type="text" column="nombre" length="65535" nullable="false"/>
+    <field name="apellido" type="text" column="apellido" length="65535" nullable="false"/>
+    <field name="fechanacimiento" type="date" column="fechaNacimiento" nullable="false"/>
+    <field name="sexo" type="text" column="sexo" length="65535" nullable="false"/>
+    <field name="mail" type="text" column="mail" length="65535" nullable="false"/>
+    <field name="telefono" type="integer" column="telefono" nullable="false"/>
+    <field name="direccion" type="text" column="direccion" length="65535" nullable="false"/>
+    <field name="eliminado" type="boolean" column="eliminado" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Pagos" table="Pagos">
+    <indexes>
+      <index name="idAlumno" columns="idAlumno,idCuota"/>
+      <index name="idCuota" columns="idCuota"/>
+      <index name="id_user" columns="id_user"/>
+      <index name="IDX_1B5A22FB77247DB7" columns="idAlumno"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="fecha" type="date" column="fecha" nullable="false"/>
+    <field name="becado" type="boolean" column="becado" nullable="false"/>
+    <field name="fechaalta" type="date" column="fechaAlta" nullable="false"/>
+    <field name="fechaactualizado" type="date" column="fechaActualizado" nullable="false"/>
+    <many-to-one field="idUser" target-entity="Usuarios">
+      <join-columns>
+        <join-column name="id_user" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idcuota" target-entity="Cuotas">
+      <join-columns>
+        <join-column name="idCuota" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idalumno" target-entity="Alumnos">
+      <join-columns>
+        <join-column name="idAlumno" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

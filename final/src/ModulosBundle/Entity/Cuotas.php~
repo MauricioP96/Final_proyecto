@@ -1,0 +1,82 @@
+<?php
+
+namespace ModulosBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Cuotas
+ *
+ * @ORM\Table(name="Cuotas")
+ * @ORM\Entity
+ */
+class Cuotas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="anio", type="integer", nullable=false)
+     */
+    private $anio;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="mes", type="integer", nullable=false)
+     */
+    private $mes;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="numero", type="integer", nullable=false)
+     */
+    private $numero;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="monto", type="decimal", precision=10, scale=0, nullable=false)
+     */
+    private $monto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tipo", type="text", length=65535, nullable=false)
+     */
+    private $tipo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="comisionCob", type="integer", nullable=false)
+     */
+    private $comisioncob;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaAlta", type="date", nullable=false)
+     */
+    private $fechaalta;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="eliminada", type="boolean", nullable=false)
+     */
+    private $eliminada;
+
+
+}
+?>

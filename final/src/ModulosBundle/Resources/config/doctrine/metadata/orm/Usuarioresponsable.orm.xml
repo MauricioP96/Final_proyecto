@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Usuarioresponsable" table="UsuarioResponsable">
+    <indexes>
+      <index name="idresponsable" columns="idresponsable"/>
+    </indexes>
+    <id name="idusuario" association-key="true"/>
+    <one-to-one field="idusuario" target-entity="Usuarios">
+      <join-columns>
+        <join-column name="idusuario" referenced-column-name="id"/>
+      </join-columns>
+    </one-to-one>
+    <many-to-one field="idresponsable" target-entity="Responsables">
+      <join-columns>
+        <join-column name="idresponsable" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

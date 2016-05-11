@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Escuela Graduada Joaquín V. González{% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{asset('/bundles/framework/css/bootstrap.css')}}">
+            <link rel="stylesheet" href="{{asset('/bundles/framework/css/Styles-m1.css')}}">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <div class="real-Body">
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+        <footer>{{contacto}}</footer>
+        <div>
+    </body>
+</html>
+
+{#<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>#}

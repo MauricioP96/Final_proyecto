@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Cuotas" table="Cuotas">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="anio" type="integer" column="anio" nullable="false"/>
+    <field name="mes" type="integer" column="mes" nullable="false"/>
+    <field name="numero" type="integer" column="numero" nullable="false"/>
+    <field name="monto" type="decimal" column="monto" precision="10" scale="0" nullable="false"/>
+    <field name="tipo" type="text" column="tipo" length="65535" nullable="false"/>
+    <field name="comisioncob" type="integer" column="comisionCob" nullable="false"/>
+    <field name="fechaalta" type="date" column="fechaAlta" nullable="false"/>
+    <field name="eliminada" type="boolean" column="eliminada" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Configuracion" table="Configuracion">
+    <id name="clave" type="integer" column="clave">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="descripcion" type="text" column="descripcion" length="65535" nullable="false"/>
+    <field name="titulo" type="text" column="titulo" length="65535" nullable="false"/>
+    <field name="mailcontacto" type="text" column="mailContacto" length="65535" nullable="false"/>
+    <field name="cantelem" type="integer" column="cantElem" nullable="false"/>
+    <field name="habilitada" type="boolean" column="habilitada" nullable="false"/>
+    <field name="textodeshab" type="text" column="textoDeshab" length="65535" nullable="false"/>
+  </entity>
+</doctrine-mapping>

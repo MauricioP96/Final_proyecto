@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Alumnos" table="Alumnos">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="numerodoc" type="integer" column="numeroDoc" nullable="false"/>
+    <field name="nombre" type="text" column="nombre" length="65535" nullable="false"/>
+    <field name="apellido" type="text" column="apellido" length="65535" nullable="false"/>
+    <field name="fechanacimiento" type="date" column="fechaNacimiento" nullable="false"/>
+    <field name="sexo" type="text" column="sexo" length="65535" nullable="false"/>
+    <field name="mail" type="text" column="mail" length="65535" nullable="false"/>
+    <field name="direccion" type="text" column="direccion" length="65535" nullable="false"/>
+    <field name="latitud" type="float" column="latitud" precision="10" scale="0" nullable="false"/>
+    <field name="longitud" type="float" column="longitud" precision="10" scale="0" nullable="false"/>
+    <field name="fechaingreso" type="date" column="fechaIngreso" nullable="false"/>
+    <field name="fechaegreso" type="date" column="fechaEgreso" nullable="false"/>
+    <field name="fechaalta" type="date" column="fechaAlta" nullable="false"/>
+    <field name="eliminado" type="boolean" column="eliminado" nullable="false"/>
+  </entity>
+</doctrine-mapping>

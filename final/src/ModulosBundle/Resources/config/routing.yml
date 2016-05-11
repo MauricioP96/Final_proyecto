@@ -1,0 +1,3 @@
+modulos_homepage:
+    path:     /
+    defaults: { _controller: ModulosBundle:Login:index }
